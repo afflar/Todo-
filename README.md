@@ -9,6 +9,8 @@ REST API for managing notes built with ASP.NET Core Web API.
 * CRUD operations for notes
 * PostgreSQL database
 * Entity Framework Core
+* Fluent Validation
+* Sorting notes
 
 ## Technologies
 
