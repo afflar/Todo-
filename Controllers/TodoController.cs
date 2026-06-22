@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 using System.Security.Claims;
 using TodoList.Models;
 using TodoList.TodoDbContext;
@@ -71,15 +72,27 @@ public class TodoController : ControllerBase
 
     [Authorize]
     [HttpGet]
-    public async Task<IActionResult> ShowAll()
+    public async Task<IActionResult> ShowAll(string? search, string? orderItem, string? order)
     {
         var id = Guid.Parse(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
 
-        var notes = await _db.Notes
-            .Where(n => n.UserId == id)
-            .Select(n => new NoteDTO(n.Id, n.Title, n.Content, n.CreateDate))
-            .ToListAsync();
+        IQueryable<Note> notes = _db.Notes
+            .AsNoTracking()
+            .Where(n => n.UserId == id);
 
-        return Ok(notes);
+        if (!string.IsNullOrWhiteSpace(search))
+            notes = notes.Where(n => n.Title.ToLower().Contains(search.ToLower()) || n.Content.ToLower().Contains(search.ToLower()));
+
+        Expression<Func<Note, object>> selectorKey = orderItem switch
+        {
+            "title" => n => n.Title,
+            _ => n => n.CreateDate
+        };
+
+        notes = order == "asc" ? notes.OrderBy(selectorKey) : notes.OrderByDescending(selectorKey);
+
+        var _notes = await notes.Select(n => new NoteDTO(n.Id, n.Title, n.Content, n.CreateDate)).ToListAsync();
+
+        return Ok(_notes);
     }
 }

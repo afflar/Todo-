@@ -133,3 +133,7 @@ C:\Users\nurikfloppa\source\repos\TodoList\TodoList\obj\Debug\net10.0\TodoList.p
 C:\Users\nurikfloppa\source\repos\TodoList\TodoList\obj\Debug\net10.0\TodoList.genruntimeconfig.cache
 C:\Users\nurikfloppa\source\repos\TodoList\TodoList\obj\Debug\net10.0\ref\TodoList.dll
 C:\Users\nurikfloppa\source\repos\TodoList\TodoList\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\nurikfloppa\source\repos\TodoList\TodoList\bin\Debug\net10.0\FluentValidation.dll
+C:\Users\nurikfloppa\source\repos\TodoList\TodoList\obj\Debug\net10.0\TodoList.sourcelink.json
+C:\Users\nurikfloppa\source\repos\TodoList\TodoList\bin\Debug\net10.0\FluentValidation.AspNetCore.dll
+C:\Users\nurikfloppa\source\repos\TodoList\TodoList\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll

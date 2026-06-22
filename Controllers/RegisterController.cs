@@ -23,7 +23,7 @@ public class RegisterController : ControllerBase
     [HttpPost("reg")]
     public async Task<IActionResult> Register(RegisterUserRequest user)
     {
-        if (await _db.Users.AnyAsync(n => n.Email == user.email)) return NotFound(user.email); 
+        if (await _db.Users.AnyAsync(n => n.Email == user.email)) return BadRequest(user.email + "\nEmail already exists"); 
 
         var hash = HashPassword(user.password);
 

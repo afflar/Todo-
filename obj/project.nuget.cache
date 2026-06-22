@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "v0pO65pyo+c=",
+  "dgSpecHash": "3dFehOP6od8=",
   "success": true,
   "projectFilePath": "C:\\Users\\nurikfloppa\\source\\repos\\TodoList\\TodoList\\TodoList.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nurikfloppa\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
+    "C:\\Users\\nurikfloppa\\.nuget\\packages\\fluentvalidation\\10.4.0\\fluentvalidation.10.4.0.nupkg.sha512",
+    "C:\\Users\\nurikfloppa\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.4.0\\fluentvalidation.aspnetcore.10.4.0.nupkg.sha512",
+    "C:\\Users\\nurikfloppa\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.4.0\\fluentvalidation.dependencyinjectionextensions.10.4.0.nupkg.sha512",
     "C:\\Users\\nurikfloppa\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\nurikfloppa\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\10.0.9\\microsoft.aspnetcore.authentication.jwtbearer.10.0.9.nupkg.sha512",
     "C:\\Users\\nurikfloppa\\.nuget\\packages\\microsoft.bcl.cryptography\\10.0.2\\microsoft.bcl.cryptography.10.0.2.nupkg.sha512",
@@ -44,7 +47,21 @@
     "C:\\Users\\nurikfloppa\\.nuget\\packages\\system.composition.hosting\\9.0.0\\system.composition.hosting.9.0.0.nupkg.sha512",
     "C:\\Users\\nurikfloppa\\.nuget\\packages\\system.composition.runtime\\9.0.0\\system.composition.runtime.9.0.0.nupkg.sha512",
     "C:\\Users\\nurikfloppa\\.nuget\\packages\\system.composition.typedparts\\9.0.0\\system.composition.typedparts.9.0.0.nupkg.sha512",
-    "C:\\Users\\nurikfloppa\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.19.1\\system.identitymodel.tokens.jwt.8.19.1.nupkg.sha512"
+    "C:\\Users\\nurikfloppa\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.19.1\\system.identitymodel.tokens.jwt.8.19.1.nupkg.sha512",
+    "C:\\Users\\nurikfloppa\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference System.Linq.Expressions не будет урезано. Рассмотрите возможность удаления этого пакета из зависимостей, так как он, вероятно, не требуется.",
+      "projectPath": "C:\\Users\\nurikfloppa\\source\\repos\\TodoList\\TodoList\\TodoList.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\nurikfloppa\\source\\repos\\TodoList\\TodoList\\TodoList.csproj",
+      "libraryId": "System.Linq.Expressions",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }
